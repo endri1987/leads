@@ -292,6 +292,14 @@ form{
     display:none;
   }
 
+    .sidebar-logo {
+        background-image: url("..img_src/logo_total_white.webp");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+}
+
+
   .sidebar-logo h1{
     font-size:18px;
   }
