@@ -68,6 +68,8 @@ body{
   cursor:pointer;
   transition:.3s;
   font-size:15px;
+  display: flex;
+  gap: 10px;
 }
 
 .nav-btn:hover{
@@ -575,4 +577,9 @@ select:focus{
   font-size:28px;
   font-weight:700;
   color:var(--text);
+}
+
+
+
+.menu_thumb{
 }
