@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Komunale CRM</title>
 
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="./style.css">
 
-      <title>Leads</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
 
-    </head>
-  </head>
-  <body>
+    <title>Leads</title>
+
+
+</head>
+
+<body>
 
     <div class="app">
 
-      <aside class="sidebar">
+        <aside class="sidebar">
 
+<<<<<<< HEAD
         <div class="sidebar-logo"></div>
 
         <nav class="sidebar-nav">
@@ -453,28 +456,396 @@
             <div class="card">
               <h3>Total Requests</h3>
               <span id="totalRequests">0</span>
+=======
+            <div class="sidebar-logo">
+
+>>>>>>> both
             </div>
 
-            <div class="card">
-              <h3>Pending</h3>
-              <span id="pendingRequests">0</span>
-            </div>
+            <nav class="sidebar-nav">
 
-            <div class="card">
-              <h3>Approved</h3>
-              <span id="approvedRequests">0</span>
-            </div>
+                <button class="nav-btn active" data-section="dashboard">
+                    <img src="img_src/dash_icon.png" class="menu_thumb">
+                    Dashboard
+                </button>
 
-            <div class="card">
-              <h3>Rejected</h3>
-              <span id="rejectedRequests">0</span>
-            </div>
+                <button class="nav-btn" data-section="requests">
+                    <img src="img_src/quote-request.png" class="menu_thumb">
+                    Requests
+                </button>
 
-            <div class="card">
-              <h3>Completed</h3>
-              <span id="completedRequests">0</span>
-            </div>
+                <button class="nav-btn" data-section="contractors">
+                    <img src="img_src/contractor.png" class="menu_thumb">
+                    Contractors
+                </button>
 
+                <button class="nav-btn" data-section="quotes">
+                    <img src="img_src/quote.png" class="menu_thumb">
+                    Quotes
+                </button>
+
+                <button class="nav-btn" data-section="commissions">
+                    <img src="img_src/commission.png" class="menu_thumb">
+                    Commissions
+                </button>
+
+            </nav>
+
+        </aside>
+        
+    </div>
+    <main class="content">
+
+            <header class="topbar">
+
+                <div>
+                    <h2>Contractor Referral Management</h2>
+                    <p>Manage requests, contractors, quotes and commissions.</p>
+                </div>
+
+                <div class="topbar-actions">
+
+                    <button id="openRequestModal" class="primary-btn">
+                        + New Request
+                    </button>
+
+                </div>
+
+            </header>
+
+            <!-- DASHBOARD -->
+
+            <section id="dashboard" class="page active-page">
+
+                <div class="cards">
+
+                    <div class="card">
+                        <h3>Total Requests</h3>
+                        <span id="totalRequests">0</span>
+                    </div>
+
+                    <div class="card">
+                        <h3>Pending</h3>
+                        <span id="pendingRequests">0</span>
+                    </div>
+
+                    <div class="card">
+                        <h3>Approved</h3>
+                        <span id="approvedRequests">0</span>
+                    </div>
+
+                    <div class="card">
+                        <h3>Rejected</h3>
+                        <span id="rejectedRequests">0</span>
+                    </div>
+
+                    <div class="card">
+                        <h3>Completed</h3>
+                        <span id="completedRequests">0</span>
+                    </div>
+
+                </div>
+
+                <div class="panel">
+
+                    <div class="panel-header">
+                        <h3>Latest Requests</h3>
+                    </div>
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Client</th>
+                                <th>Phone</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="latestRequestsTable">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+            <!-- REQUESTS -->
+
+            <section id="requests" class="page">
+
+                <div class="page-header">
+
+                    <h2>Requests</h2>
+
+                    <button id="openRequestModal2" class="primary-btn">
+                        + Create Request
+                    </button>
+
+                </div>
+
+                <div class="panel">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Client</th>
+                                <th>Phone</th>
+                                <th>Address</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="requestsTable">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+            <!-- CONTRACTORS -->
+
+            <!-- CONTRACTORS -->
+
+            <section id="contractors" class="page">
+
+                <div class="page-header">
+                    <h2>Contractors</h2>
+
+                    <button id="openContractorModal" class="primary-btn">
+                        + Add Contractor
+                    </button>
+                </div>
+
+                <div class="panel">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                                <th>Area</th>
+                                <th>Services</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="contractorsTable"></tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+            <!-- CONTRACTOR MODAL -->
+
+            <div class="modal" id="contractorModal">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h2>Add Contractor</h2>
+                        <button id="closeContractorModal">&times;</button>
+                    </div>
+
+                    <form id="contractorForm">
+
+                        <input type="text" id="contractorName" placeholder="Contractor Name" required>
+
+                        <input type="email" id="contractorEmail" placeholder="Email Address">
+
+                        <input type="text" id="contractorPhone" placeholder="Phone Number" required>
+
+                        <input type="text" id="contractorArea" placeholder="Service Area" required>
+
+                        <input type="text" id="contractorServices" placeholder="Services (Plumbing, Electrical, Painting...)" required>
+
+                        <select id="contractorStatus">
+
+                            <option value="Active">Active</option>
+
+                            <option value="Inactive">
+                                Inactive
+                            </option>
+
+                            <option value="Suspended">
+                                Suspended
+                            </option>
+
+                        </select>
+
+                        <textarea id="contractorNotes" placeholder="Internal Notes"></textarea>
+
+                        <button type="submit" class="primary-btn">
+                            Save Contractor
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+            <!-- QUOTES -->
+            <!-- QUOTES -->
+
+            <section id="quotes" class="page">
+
+                <div class="page-header">
+
+                    <h2>Quotes</h2>
+
+                    <button id="openQuoteModal" class="primary-btn">
+                        + Add Quote
+                    </button>
+
+                </div>
+
+                <div class="panel">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Request</th>
+                                <th>Contractor</th>
+                                <th>Price</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="quotesTable">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+            <!-- COMMISSIONS -->
+            <!-- COMMISSIONS -->
+
+            <section id="commissions" class="page">
+
+                <div class="page-header">
+
+                    <h2>Commissions</h2>
+
+                </div>
+
+                <div class="panel">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Request</th>
+                                <th>Contractor</th>
+                                <th>Total Price</th>
+                                <th>Commission %</th>
+                                <th>Commission Amount</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="commissionsTable">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+            <!-- CREATE REQUEST MODAL -->
+
+            <div class="modal" id="requestModal">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h2>Create New Request</h2>
+                        <button id="closeRequestModal">&times;</button>
+                    </div>
+
+                    <form id="requestForm">
+
+                        <input type="text" id="clientName" placeholder="Client Name" required>
+
+                        <input type="text" id="clientPhone" placeholder="Phone Number" required>
+
+                        <input type="text" id="clientAddress" placeholder="Property Address" required>
+
+                        <textarea id="projectDescription" rows="5" placeholder="Project Description" required></textarea>
+
+                        <button type="submit" class="primary-btn">
+                            Save Request
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+            <!-- QUOTE MODAL -->
+
+            <div class="modal" id="quoteModal">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h2>Add Quote</h2>
+                        <button id="closeQuoteModal">&times;</button>
+                    </div>
+
+                    <form id="quoteForm">
+
+                        <input type="text" id="quoteRequest" placeholder="Request / Job" required>
+
+                        <input type="text" id="quoteContractor" placeholder="Contractor Name" required>
+
+                        <input type="number" id="quotePrice" placeholder="Quote Price" required>
+
+                        <select id="quoteStatus">
+
+                            <option value="Pending">
+                                Pending
+                            </option>
+
+                            <option value="Approved">
+                                Approved
+                            </option>
+
+                            <option value="Rejected">
+                                Rejected
+                            </option>
+
+                        </select>
+
+                        <button type="submit" class="primary-btn">
+                            Save Quote
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+            <script type="module" src="./js/firebase.js"></script>
+            <script type="module" src="./js/app.js"></script>
+
+        </main>
+</body>
+
+<<<<<<< HEAD
           </div>
 
           <div class="panel">
@@ -882,3 +1253,6 @@
 >>>>>>> both
       </body>
     </html>
+=======
+</html>
+>>>>>>> both
