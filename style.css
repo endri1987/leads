@@ -40,10 +40,6 @@ body{
   overflow-y:auto;
 }
 
-.sidebar-logo{
-  margin-bottom:40px;
-}
-
 .sidebar-logo h1{
   font-size:28px;
   font-weight:800;
@@ -375,12 +371,21 @@ form{
   border-right:1px solid rgba(255,255,255,.05);
 }
 
-.sidebar-logo{
+  .sidebar-logo{
   display:flex;
   justify-content:center;
   align-items:center;
   margin-bottom:35px;
+  background-image: url("img_src/logo_total_white.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 180px;
+  height: 70px;
 }
+
+
+
 
 .logo{
   width:170px;
